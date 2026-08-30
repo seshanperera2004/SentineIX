@@ -36,7 +36,7 @@ The system is organized into four layers:
 |---|---|
 | **Sensing** | ESP32 + load cell + MQ-6 gas sensor capture weight and gas concentration |
 | **Transmission & Storage** | Sensor data sent over Wi-Fi to a cloud-hosted Supabase/PostgreSQL database |
-| **Analysis** | A scheduled Python backend runs statistical and SARIMA models on the stored readings |
+| **Analysis** | Statistical (STL, rolling regression) and SARIMA models are run on the stored readings to generate depletion forecasts |
 | **Presentation** | A Kotlin/Jetpack Compose mobile app displays live data, forecasts, and push alerts |
 
 ---
