@@ -3,7 +3,7 @@
 **IoT-based weight monitoring with statistical and machine-learning prediction of gas depletion and leak detection**
 
 Built for **Data Odyssey 2026** — *"Humanity x AI: The New Age of Innovation"*
-General Sir John Kotelawala Defence University (KDU) | BSc (Hons) Applied Data Science & Communication
+General Sir John Kotelawala Defence University (KDU) | BSc in Applied Data Science Communication
 
 ---
 
