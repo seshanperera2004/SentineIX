@@ -1,4 +1,4 @@
-#  Smart Gas Cylinder Monitoring System
+<img width="1256" height="425" alt="image" src="https://github.com/user-attachments/assets/c5961af5-a37d-45ef-abde-66e0762ea6f8" />#  Smart Gas Cylinder Monitoring System
 
 **IoT-based weight monitoring with statistical and machine-learning prediction of gas depletion and leak detection**
 
@@ -7,7 +7,7 @@ General Sir John Kotelawala Defence University (KDU) | BSc (Hons) Applied Data S
 
 ---
 
-## 📌 Overview
+##  Overview
 
 Most households that rely on Liquefied Petroleum Gas (LPG) cylinders have no reliable way to know how much gas is left, or whether a cylinder is leaking, until it's too late — the gas runs out mid-cooking, or a leak goes undetected until it becomes dangerous.
 
@@ -17,7 +17,7 @@ This project was built by **Team SentineIX** and applies concepts from the *Fund
 
 ---
 
-## ✨ Features
+##  Features
 
 - 📡 **Real-time sensing** — cylinder weight and gas concentration captured every 5 minutes via an ESP32 microcontroller
 - ☁️ **Cloud-connected** — sensor data streamed over Wi-Fi to a Supabase/PostgreSQL database
@@ -28,7 +28,7 @@ This project was built by **Team SentineIX** and applies concepts from the *Fund
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 The system is organized into four layers:
 
@@ -41,15 +41,15 @@ The system is organized into four layers:
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 **Hardware**
 - ESP32 development board
 - Load cell + HX711 amplifier
 - MQ-6 gas sensor
 
-**Backend / Data**
-- Python (pandas, statsmodels, scikit-learn)
+**Data & Analysis**
+- pandas, statsmodels, scikit-learn
 - Supabase (PostgreSQL)
 - SARIMA (`statsmodels.tsa.statespace.sarimax`)
 
@@ -60,21 +60,19 @@ The system is organized into four layers:
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 
-├── firmware/ # ESP32 C++/Arduino code for sensor readings & data upload
-├── backend/ # Python scripts for data processing, STL, and SARIMA modeling
-├── mobile-app/ # Kotlin + Jetpack Compose Android application
-├── data/ # Collected sensor readings (CSV/exports)
-├── docs/ # Project report, diagrams, and supporting documents
+├── gasmonitorapp/ # Kotlin + Jetpack Compose Android application
+├── gas_cylinder_monitor.ino # ESP32 firmware — sensor readings & data upload
+├── WhatsApp Image 2026-08-29 ...jpg # App screenshots (normal / leak-alert states)
+├── .gitattributes
 └── README.md
-
 
 > *Update the tree above to match your actual folder layout.*
 
 ---
 
-## 📊 Dataset
+##  Dataset
 
 - **Source:** Custom-collected via the ESP32 prototype (not a public dataset)
 - **Collection period:** 25 July – 26 August 2026 (33 days)
@@ -91,7 +89,7 @@ The system is organized into four layers:
 
 ---
 
-## 🔬 Methodology
+##  Methodology
 
 **Statistical approach**
 - STL decomposition to extract trend, seasonal usage patterns, and noise
@@ -108,7 +106,7 @@ The system is organized into four layers:
 
 ---
 
-## 📈 Results
+##  Results
 
 | Model | MAE (kg) | RMSE (kg) |
 |---|---|---|
@@ -121,11 +119,12 @@ The system is organized into four layers:
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
-- Python 3.9+
-- Arduino IDE / PlatformIO (for ESP32 firmware)
+- Arduino IDE (or PlatformIO)
+- ESP32 board support package installed in Arduino IDE
+- Required libraries: `WiFi.h`, `HX711.h`
 - Android Studio (for the mobile app)
 - A Supabase project (PostgreSQL database + REST API)
 - A Firebase project (for Cloud Messaging)
@@ -134,7 +133,7 @@ The system is organized into four layers:
 
 1. **Clone the repository**
 ```bash
-   git clone https://github.com/seshanperera2004/SentineIX.git/<your-repo>.git
+   git clone https://github.com/<your-username>/<your-repo>.git
    cd <your-repo>
 ```
 
@@ -149,15 +148,16 @@ The system is organized into four layers:
    - Open `mobile-app/` in Android Studio
    - Add your Supabase and Firebase configuration files
    - Build and run on an emulator or physical device
+
 ---
 
-## ⚠️ Limitations
+##  Limitations
 
 - Data was collected from a single prototype unit over 33 days (3 refill cycles), limiting generalisability to other households or cylinder sizes
 - The MQ-6 sensor was used as a relative, threshold-based signal rather than a ppm-calibrated one
 - Brief Wi-Fi dropouts caused minor gaps, filled via linear interpolation
 
-## 🔭 Future Work
+##  Future Work
 
 - Multi-cylinder monitoring support
 - Calibrated gas sensor readings
@@ -165,7 +165,7 @@ The system is organized into four layers:
 
 ---
 
-## 👥 Team SentineIX
+##  Team SentineIX
 
 - **Seshan Perera** 
 - **Nisul Rankothge**
@@ -174,7 +174,7 @@ The system is organized into four layers:
 
 ---
 
-## 📚 References
+##  References
 
 - Seabold, S. and Perktold, J. (2010) 'statsmodels: Econometric and statistical modeling with python', *Proceedings of the 9th Python in Science Conference*.
 - Cleveland, R.B., Cleveland, W.S., McRae, J.E. and Terpenning, I. (1990) 'STL: A seasonal-trend decomposition procedure based on loess', *Journal of Official Statistics*, 6(1), pp. 3–73.
@@ -188,6 +188,6 @@ The system is organized into four layers:
 
 ---
 
-## 📄 License
+##  License
 
 This project was developed for academic purposes as part of Data Odyssey 2026 at KDU. 
